@@ -1,10 +1,10 @@
 ;(function(){
   $('.view-wrap-table tr:nth-child(2n+3)').addClass('dark')
   $('.map-btn').click(function(){
-    var wrap = $(this).parents('.view-wrap')
+    var wrap = $(this).parents('.view')
     var map = $(this).parent('.map')
     var info = $(this).parent('.map').next('.info')
-    wrap.toggleClass('has-corner')
+    wrap.toggleClass('with-bg right')
     if(info.css('right') !== '0px'){
       map.before('<div class="shine v-center"><div>')
       info.animate({'right':'0'},500,'swing');

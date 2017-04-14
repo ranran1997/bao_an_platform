@@ -35,24 +35,25 @@ i,em{font-style:normal;}b{font-weight:normal;}
 .bs{box-sizing:border-box;}
 html,body{height:100%;}h1,h2{font-weight:normal;}
 .view{height:100%;overflow:hidden;background:#091048;padding:20px;box-sizing:border-box;}
-.view-wrap{height:100%;border:1px solid #3d93fc;position:relative;background:#141F60;position:relative;overflow:hidden;}
-.view-wrap.has-corner:before{content:url('../img/corner-left.png');position:absolute;left:0;top:0;}
-.view-wrap.has-corner:after{content:url('../img/corner-right.png');position:absolute;right:0;top:0;}
+.view-wrap{height:100%;border:1px solid #3d93fc;position:relative;background:#141F60;position:relative;}
+.with-bg:before{content:url('../img/corner-left.png');position:absolute;left:20px;top:20px;z-index:10;}
+.with-bg:after{content:url('../img/corner-right.png');position:absolute;right:20px;top:20px;z-index:10;}
+.with-bg.right:before{display:none;}
 .view-wrap .shine{width:100%;height:100%;position:absolute;left:0;top:0;}
 .view-wrap .shine.up-down:before{content:url('../img/h-shine.png');position:absolute;left:50%;top:-10.5px;margin-left:-403px;z-index:2;}
 .view-wrap .shine.up-down:after{content:url('../img/h-shine.png');position:absolute;left:50%;bottom:-10.5px;margin-left:-403px;z-index:2;}
 .view-wrap .shine.left-right:before{content:url('../img/v-shine.png');position:absolute;left:-7.5px;bottom:10%;z-index:2;}
 .view-wrap .shine.left-right:after{content:url('../img/v-shine.png');position:absolute;right:-7.5px;top:10%;z-index:2;}
-.view-wrap .shine.v-center:before{content:url('../img/v-shine.png');position:absolute;right:-7.5px;top:50%;z-index:2;margin-top:-204px;}
+.view-wrap .shine.v-center:before{content:url('../img/v-shine.png');position:fixed;right:13px;top:50%;z-index:2;margin-top:-204px;}
 /*列表*/
-.view-wrap-table{padding:20px 30px;}
+.view-wrap-table{padding:20px 30px;width:100%;height:100%;overflow:auto;}
 .view-wrap-table table{width:100%;border:1px solid #273570;}
 .view-wrap-table table th,.view-wrap-table table td{font-size:18px;font-weight:normal;text-align:center;position:relative;}
 .view-wrap-table th{color:#fff;padding:10px 1em;}
 .view-wrap-table td{padding:17px 1em;}
 .view-wrap-table tr.dark{background:#07134B;}
-.view-wrap-table th:before,.view-wrap-table table td:before{content:"";display:inline-block;width:100%;height:1px;position:absolute;left:0;bottom:0;background:rgba(255,255,255,0.1);}
-.view-wrap-table th:after,.view-wrap-table table td:after{content:"";display:inline-block;height:100%;width:1px;position:absolute;right:0;top:0;background:rgba(255,255,255,0.1);}
+.view-wrap-table th:before,.view-wrap-table table td:before{content:"";display:inline-block;width:100%;height:1px;position:absolute;left:0;bottom:0;background:url('../img/line.png') repeat;}
+.view-wrap-table th:after,.view-wrap-table table td:after{content:"";display:inline-block;height:100%;width:1px;position:absolute;right:0;top:0;background:url('../img/line.png') repeat;}
 /*地图*/
 .map{width:100%;height:100%;background:url('../img/map.png') no-repeat center center;background-size:cover;position:relative;box-sizing:border-box;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='img/map.png', sizingMethod='scale');}
 .map-tit{display:inline-block;position:absolute;left:40px;top:20px;padding:10px 20px;background:rgba(234,0,71,0.8);border-radius:6px;font-size:24px;color:#fff;background:#EC326A;opacity:0.8;filter:alpha(opacity=80);}
@@ -90,9 +91,11 @@ html,body{height:100%;}h1,h2{font-weight:normal;}
   .flow-tit{padding-bottom:90px;}
   .flow-img{width:90%;}
 }
-
-
-
+.hidden{overflow:hidden;}
+.with-horizontal:before,.with-horizontal:after{content:"";width:15px;height:408px;background:url(../img/v-shine.png) no-repeat center center;position:absolute;top:50%;left:-8px;margin-top:-200px;}
+.with-horizontal:after{left:auto;right:-8px;}
+.with-vertical:before,.with-vertical:after{content:"";width:806px;height:15px;background:url(../img/h-shine.png) no-repeat center center;position:absolute;top:-8px;left:50%;margin-left:-403px;}
+.with-vertical:after{top:auto;bottom:-8px;}
 
 
 @font-face {
